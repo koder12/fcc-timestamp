@@ -1,8 +1,8 @@
 var express = require('express');
 var app = express();
-var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 function uton(timestamp) {
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     var valid = (new Date(timestamp)).getTime() > 0;
     if (valid) {
         var a = new Date(timestamp * 1000);
@@ -12,7 +12,6 @@ function uton(timestamp) {
         return (month + ' ' + day + ', ' + year);
     }
     return null;
-
 }
 
 function ntou(time) {
